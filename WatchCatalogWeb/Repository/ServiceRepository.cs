@@ -22,11 +22,7 @@ namespace WatchCatalogWeb.Repository
             {
                 InitializeConnection();
             }
-            options = new RestClientOptions(root[Url])
-            {
-                MaxTimeout = -1,
-            };
-            client = new RestClient(options);
+            client = new RestClient(root[Url]);
         }
         public T Execute<T>(RestRequest request) where T : new()
         {

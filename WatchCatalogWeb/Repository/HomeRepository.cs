@@ -29,7 +29,7 @@ namespace WatchCatalogWeb.Repository
 
         public WatchInfoModelList GetAllWatchInfo()
         {
-            RestRequest listRequest = new RestRequest($"GET_ALL_WATCHINFO", Method.Get);
+            RestRequest listRequest = new RestRequest($"api/GET_ALL_WATCHINFO", Method.Get);
             WatchInfoModelList listResult = Service.Execute<WatchInfoModelList>(listRequest);
             return listResult;
         }

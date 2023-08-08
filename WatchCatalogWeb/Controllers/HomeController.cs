@@ -7,11 +7,11 @@ namespace WatchCatalogWeb.Controllers
 {
     public class HomeController : Controller
     {
-        IConfiguration configuration;
+        private readonly ILogger<HomeController> _logger;
         private ServiceRepository API = new ServiceRepository();
-        public HomeController(IConfiguration _configuration)
+        public HomeController(ILogger<HomeController> logger)
         {
-            configuration = _configuration;
+            _logger = logger;
         }
 
         public IActionResult Index()
